@@ -28,6 +28,7 @@ Much of this was taken from: https://www.collabora.com/news-and-blog/blog/2019/0
 #### Load modules in cmdline.txt
 
 #### Mount configfs using fstab on boot
+sys-kernel-config.mount handles this via systemd
 
 #### Create service to start gadget when UDC is available
 
