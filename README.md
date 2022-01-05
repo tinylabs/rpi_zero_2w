@@ -23,13 +23,15 @@ Much of this was taken from: https://www.collabora.com/news-and-blog/blog/2019/0
     make
     sudo make install
    
-#### Add overlay for USB device in boot.txt
+#### Add overlay for USB device in config.txt
+    # Enable ethernet gadget
+    dtoverlay=dwc2
 
-#### Load modules in cmdline.txt
-
-#### Mount configfs using fstab on boot
-sys-kernel-config.mount handles this via systemd
+#### Load modules on boot in cmdline.txt
+    ... rootwait modules-load=dwc2,libcomposite
+    
+#### Create scheme for each composite device supported
 
 #### Create service to start gadget when UDC is available
 
-#### Create scheme for each composite device supported
+#### Enable gadget service on boot
